@@ -1,0 +1,217 @@
+﻿<%@ Master Language="VB" CodeFile="MP_Management.master.vb" Inherits="Presentation_Modules_ManagementWebsite_MP_Management" %>
+
+<%@ Register Assembly="WebChart" Namespace="WebChart" TagPrefix="Web" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>پنل مدیریت سایت - </title>
+    <link href="ManagerWebsite.css" type="text/css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            font-family: Tahoma;
+            font-size: 11px;
+            width: 294px;
+        }
+        .style2
+        {
+            width: 293px;
+            color: #FFFFFF;
+        }
+        .style3
+        {
+            width: 146px;
+        }
+        .style4
+        {
+            width: 100px;
+        }
+        .style6
+        {
+            width: 100%;
+        }
+        .style7
+        {
+            width: 53px;
+        }
+        .style10
+        {
+            color: #FEFFFF;
+        }
+        .style12
+        {
+            font-size: 9px;
+            color: #FFFFFF;
+        }
+        .style13
+        {
+            color: #FF0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="Header_">
+        <div id="Picture">
+            <div id="Ghab">
+                <asp:Image ID="Im_User" runat="server" Height="134px" Width="123px" />
+            </div>
+        </div>
+        <div id="Detail_User">
+            <table class="style1">
+                <tr>
+                    <td class="style4">
+                        نام کاربری:
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_Username" runat="server" Style="font-weight: 700; color: #FF0000;
+                            font-size: 10px"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4">
+                        نام و نام خانوادگی:
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_FnLn" runat="server" Style="font-weight: 700; color: #FFFFFF;
+                            font-size: 10px"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4">
+                        سطح دسترسی:
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_Role" runat="server" Style="font-weight: 700; color: #006600;
+                            font-size: 10px"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="style4">
+                        ساعت و تاریخ ورود:
+                    </td>
+                    <td>
+                        <asp:Label ID="lbl_TimeDate" runat="server" Style="font-weight: 700; color: #FFFFFF;
+                            font-size: 10px"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="Name_Site">
+            <table class="style2">
+                <tr>
+                    <td class="style3">
+                        پنل اختصاصی سایت:
+                    </td>
+                    <td class="style3">
+                        Http://www.caspianTeam.com
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="Right">
+        <%--<img src="images/Top_.gif" id="Top_" />--%>
+        <table class="style6">
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <span class="style10">مقدار فضای استفاده </span><span class="style13">شده</span><span 
+                        class="style10"> در سایت:</span></td>
+            </tr>
+            <tr>
+                <td style="text-align: right">
+                    <table class="style6">
+                        <tr>
+                            <td class="style7">
+                    <asp:Label ID="Label1" runat="server" Text="0" Style="color: #FFFFFF; font-weight: 700;"></asp:Label>
+                            </td>
+                            <td class="style12">
+                                به مگابایت (MB) می باشد</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="style10">مقدار فضای استفاده </span><span class="style13">نشده</span><span 
+                        class="style10"> در سایت:</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="style6">
+                        <tr>
+                            <td class="style7">
+                    <asp:Label ID="Label2" runat="server" Text="0" 
+                                    Style="color: #FFFFFF; text-align: right; font-weight: 700;"></asp:Label>
+                            </td>
+                            <td class="style12">
+                                به مگابایت (MB) می باشد</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #4981B4">
+                    این رنگ نشانه پر بودن</td>
+            </tr>
+            <tr>
+                <td style="background-color: #483D8B">
+                    این رنگ نشانه خالی بودن</td>
+            </tr>
+            <tr>
+                <td>
+                    <Web:ChartControl ID="ChartControl1" runat="server" BorderStyle="None" ChartFormat="Jpg"
+                        ChartPadding="30" EnableTheming="True" GridLines="None" Padding="-38" YCustomEnd="0"
+                        YCustomStart="0" YValuesInterval="0" HasChartLegend="False" Height="135px" ShowTitlesOnBackground="False"
+                        ShowXValues="False" ShowYValues="False" TopPadding="20" Width="144px">
+                        <Border Color="51, 102, 204" Width="2" />
+                        <YAxisFont StringFormat="Far,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold"
+                            ForeColor="0, 153, 153"></YAxisFont>
+                        <XTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold"
+                            ForeColor="204, 204, 255"></XTitle>
+                        <PlotBackground Angle="90" EndPoint="0, 0" centercolor="5, 120, 186" 
+                            color="#3F3F3F" />
+                        <XAxisFont StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 8pt, style=Bold"
+                            ForeColor="0, 153, 153"></XAxisFont>
+                        <Background Angle="90" EndPoint="100, 400" ForeColor="#3366FF" 
+                            HatchStyle="DashedHorizontal" centercolor="SaddleBrown" color="#003399" 
+                            lineargradientmode="BackwardDiagonal"></Background>
+                        <ChartTitle StringFormat="Center,Near,Character,LineLimit" Font="Tahoma, 10pt, style=Bold"
+                            ForeColor="204, 204, 255"></ChartTitle>
+                        <Charts>
+                            <Web:PieChart Name="PieChart">
+                                <DataLabels>
+                                    <Border Color="Transparent" />
+                                    <Background Color="Transparent" />
+                                </DataLabels>
+                                <Shadow Color="Wheat" />
+                            </Web:PieChart>
+                        </Charts>
+                        <YTitle StringFormat="Center,Near,Character,DirectionVertical" Font="Tahoma, 8pt, style=Bold"
+                            ForeColor="204, 204, 255"></YTitle>
+                    </Web:ChartControl>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+            </tr>
+        </table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        <%--<img src="images/Down_.gif" id="Down_" />--%>
+    </div>
+    <div id="Center">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

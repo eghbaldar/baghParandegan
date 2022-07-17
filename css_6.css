@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* Eghbaldar.com */
+body, div, p, h1, h2, h3, h4, ul, li, table{
+border-style: none;
+	border-color: inherit;
+	border-width: medium;
+	margin: 0;
+	padding: 0;
+	width: 24px;
+}
+body{
+padding:0px;
+}
+#body{
+margin: 5px auto 20px auto;
+width:909px;
+}
+#header{
+
+	background-image:url(images/bird_bg.gif);
+	background-repeat:repeat-x;
+	width:970px;
+	height:159px;
+}
+#arm{position:absolute;}
+
+#mnu{
+margin-left:-524px;
+	margin-top:170px;
+	position:absolute;
+	background-image:url(images/mnu.gif);
+	background-repeat:repeat-x;
+	width:970px;
+	height:20px;
+	}
+	
+#right_mnu{float:right;}
+.F{
+float:right;
+font-family:Tahoma, Geneva, sans-serif;
+color:#FFF;
+font-size:12px;
+margin-top:10px;
+}
+#HomePage{	margin-top:10px;}
+#s1,#s2,#s3,#s4{	margin-right:5px;margin-top:0px;}
+#Galery,#sale,#about,#contact{		margin-right:5px;}
+#Search{
+	margin-top:5px;
+	margin-left:10px;
+	float:left;
+	background-color:#FFF;
+	height:25px;
+	width:200px;
+	}
+#ghab{
+	margin-right:8px;
+	margin-top:-40px;
+	background-color:#fff;
+	border-color:#CCC;
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 1px; 
+	padding-bottom: 1px;
+	width:930px;
+	height:300px;
+	float:right;
+}
+#left_s{
+margin-right:13px;
+	margin-top:-320px;
+	float:left;
+}
+#right_s{
+	float:right;
+		margin-top:-50px;
+}
+#frame_top_left{float:left;margin-left:-5px;position:absolute;margin-top:-2px;}
+#frame_top_right{float:right;margin-left:928px;position:absolute;margin-top:-2px;}
+#frame_down_left{float:left;margin-left:-5px;position:absolute;margin-top:295px;}
+#frame_down_right{float:right;margin-left:928px;position:absolute;margin-top:295px;}
+
+#oghab{
+	position:absolute;
+	margin-top:5px;
+	margin-left:334px;
+}
+#center{
+	position:absolute;
+float:right;
+	width:968px;
+	height:200px;
+/* background-color:#366; */	
+	margin-top:5px;
+}
+#etelaei{
+	float:right;
+	margin-right:25px;
+}
+#animal{
+		margin-right:3px;
+		float:right
+}
+#text_etealat{
+	margin-left:885px;
+	margin-top:-24px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#224547;
+	position:absolute;}
+	
+#text_animal{position:absolute;
+	margin-left:532px;
+	margin-top:-24px;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#224547;
+}
+#content_etalie{
+
+	margin-right:13px;
+	float:right;
+	width:351px;
+	height:200px;
+}
+#content_animal{
+
+	margin-right:0px;
+	float:right;
+	width:584px;
+	height:330px;
+}
+#footer{
+	position:absolute;
+	margin-top:280px;
+	width:960px;
+	height:56px;
+	background-image:url(images/footer.gif);
+	background-repeat:repeat-x;
+}
+#right_footer{
+	margin-top:-1px;
+		float:right;
+}
+#left_footer{
+		float:left;
+	margin-top:-1px;
+	}
+#text_footer{
+	position:absolute;
+	margin-top:25px;
+margin-left:350px;
+	text-align:center;
+	float:right;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:11px;
+	color:#301e10;
+}
+
+
+
+

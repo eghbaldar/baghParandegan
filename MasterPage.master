@@ -1,0 +1,67 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>باغ پرندگان ماهان</title>
+    <link rel="SHORTCUT ICON" href="icon.jpg">
+    <link href="css_FF.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]> <link href="css_6.css" rel="stylesheet" type="text/css" /> <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="body">
+        <form id="form1" runat="server">
+        <div>
+            <div id="header">
+                <img src="images/bird1.gif" />
+                <img src="images/Arm.gif" id="arm" />
+                <div id="mnu">
+                    <img src="images/right_mnu.gif" id="right_mnu" />
+                    <div class="F" id="HomePage">
+                        <a href="Default.aspx" style="text-decoration:none;color:White;">صفحه اصلی</a></div>
+                    <img src="images/spliter_mnu.gif" class="F" id="s1" />
+                    <div class="F" id="Galery">
+                        <a href="gallery.aspx" style="text-decoration:none;color:White;">گالری تصاویر</a></div>
+                    <img src="images/spliter_mnu.gif" class="F" id="s2" />
+                    <div class="F" id="sale">
+                        <a href="sale.aspx" style="text-decoration:none;color:White;">فروش حیوانات</a></div>
+                    <img src="images/spliter_mnu.gif" class="F" id="s3" />
+                    <div class="F" id="about">
+                        <a href="about.aspx" style="text-decoration:none;color:White;">درباره ما</a></div>
+                    <img src="images/spliter_mnu.gif" class="F" id="s4" />
+                    <div class="F" id="contact">
+                        <a href="contact.aspx" style="text-decoration:none;color:White;">تماس با ما</a></div>
+                    <div id="Search">
+                    </div>
+                </div>
+                <div id="aks">
+                    <img src="images/left.gif" id="right_s" />
+                    <div id="ghab">
+                        <img src="images/frame_top_left.gif" id="frame_top_left" />
+                        <img src="images/frame_top_right.gif" id="frame_top_right" />
+                        <img src="images/Oghab.gif" id="oghab" />
+                        <img src="images/frame_down_left.gif" id="frame_down_left" />
+                        <img src="images/frame_down_right.gif" id="frame_down_right" />
+                    </div>
+                    <img src="images/left.gif" id="left_s" />
+                </div>
+<div id="center">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+</div>
+            </div>
+            <div id="footer">
+                <img src="images/left_footer.gif" id="left_footer" />
+                <img src="images/right_footer.gif" id="right_footer" />
+                <div id="text_footer">
+                    Powered By <span><a href="http://www.caspianteam.com" style="color: #301e10; text-decoration: none;">
+                        CaspianTeam.com</a></span> © 2011-2012</div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
